@@ -2,12 +2,14 @@ body{
 
     margin: 0%;
     display: grid;
-    grid-template-rows: 1fr 2fr 6fr 2fr;
+    grid-template-rows: auto auto auto;
     grid-template-areas:
         "a"
         "b"
-        "c"
-        "d";
+        "c";
+}
+header{
+    grid-area: a;
 }
 .bgpdark{
     background-color: #003d00;
@@ -24,7 +26,7 @@ body{
     display: flex;
     align-items: center;
     justify-content: space-between; 
-    grid-area: a;
+    
 }
 .title{
     display: flex;
@@ -49,19 +51,38 @@ i{
     border-radius: 10px;
     width: 70%;
 }
-
+.img{
+    display: flex;
+    width: 100%;
+    
+}
 .card{
     display: flex;
     flex-direction: column;
     text-align: center;
     border: solid 1px grey;
-    border-radius: 10px;
-    
+    border-radius: 10px;   
 }
-.container{
-    margin: 40px 0px;
+.card-hid{
+    display: none;
+}
+
+.btn2:hover{
+    opacity: .5;
+}
+main{
     display: flex;
-    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    grid-area: b;
+}
+
+.container{
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+    padding: 40px 0px;
+    width: 80%;
    
 }
 .btn2{
@@ -71,3 +92,24 @@ i{
     border-radius: 10px;
     color: white;
 }
+.pages{
+    margin: 25px 0px 50px 0px;
+}
+.pages a{
+    text-decoration: none;
+    
+} 
+footer{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #212121;
+}
+footer div{
+    align-items: center; 
+    padding-top: 20px;
+}
+footer h2{
+    padding-bottom: 10px;
+}
+
