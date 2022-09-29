@@ -1,16 +1,19 @@
-body{
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@200;300;400;600&display=swap');
 
+
+
+body{
+    font-family:'Oswald', sans-serif;
     margin: 0%;
     display: grid;
-    grid-template-rows: auto auto auto;
+    grid-template-rows: auto auto auto auto;
     grid-template-areas:
         "a"
         "b"
-        "c";
+        "c"
+        "d";
 }
-header{
-    grid-area: a;
-}
+
 .bgpdark{
     background-color: #003d00;
     color: white;
@@ -26,7 +29,10 @@ header{
     display: flex;
     align-items: center;
     justify-content: space-between; 
-    
+    grid-area: a;
+}
+.fa-bars1{
+    padding-right: 20px;
 }
 .title{
     display: flex;
@@ -41,11 +47,11 @@ i{
     display: flex;
     flex-direction: column;
     align-items: center; 
+    grid-area: b;
 }
 .btn1{
     display: flex;
     align-items: center;
-    padding: 5px;
     margin-bottom: 1.5rem;
     justify-content: space-between;
     border-radius: 10px;
@@ -61,8 +67,10 @@ i{
     flex-direction: column;
     text-align: center;
     border: solid 1px grey;
-    border-radius: 10px;   
+    border-radius: 10px;
+    overflow: hidden;   
 }
+
 .card-hid{
     display: none;
 }
@@ -74,15 +82,16 @@ main{
     display: flex;
     flex-direction: column;
     align-items: center;
-    grid-area: b;
+    grid-area: c;
 }
 
 .container{
     display: flex;
-    flex-direction: column;
-    gap: 40px;
-    padding: 40px 0px;
-    width: 80%;
+    flex-wrap: wrap;
+    gap: 20px;
+    padding: 40px 10px;
+    justify-content: space-around;
+    
    
 }
 .btn2{
@@ -104,6 +113,7 @@ footer{
     flex-direction: column;
     align-items: center;
     background-color: #212121;
+    grid-area: d;
 }
 footer div{
     align-items: center; 
@@ -112,4 +122,85 @@ footer div{
 footer h2{
     padding-bottom: 10px;
 }
-
+.anclas{
+    display: none;
+}
+@media (min-width: 576px) and (max-width: 992px){
+    body{
+        font-family:'Oswald', sans-serif;
+        margin: 0%;
+        display: grid;
+        grid-template-rows: auto auto auto auto;
+        grid-template-columns: 20% 80%;
+        grid-template-areas:
+            "a a"
+            "b c"
+            "b c"
+            "d d";
+    }
+    .fa-bars1{
+        display: none;
+        color: #003d00;
+    }
+    .anclas{
+        display: flex; 
+    }
+    .anclas a{
+        padding-right: 50px;
+        text-decoration: none;
+        color: white;
+    }
+    .card-hid:nth-child(2){
+        display: flex;
+    }
+    .card{
+        width: 40%;
+    }
+}
+@media (min-width: 993px){
+    body{
+        font-family:'Oswald', sans-serif;
+        margin: 0%;
+        display: grid;
+        grid-template-rows: 15% 50% 15% 20%;
+        grid-template-columns: 20% 80%;
+        grid-template-areas:
+            "a b"
+            "a c"
+            "a c"
+            "d c";
+    }
+    .navbar{
+        display: flex;
+        flex-direction: column;
+        align-items: center; 
+        grid-area: a;
+        justify-content: flex-start;
+    }
+    
+    h4{
+        text-align: center;
+    }
+    .fa-bars1{
+        display: none;
+        color: #003d00;
+    }
+    .anclas{
+        display: flex; 
+        flex-direction: column;
+    }
+    .anclas a{
+        padding-top: 8px;
+        text-decoration: none;
+        color: white;
+    }
+    footer h2{
+        text-align: center;
+    }
+    .card{
+        width: 22%;
+    }
+    .card-hid{
+        display: flex;
+    }
+}    
