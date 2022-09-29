@@ -103,9 +103,15 @@ main{
 }
 .pages{
     margin: 25px 0px 50px 0px;
+    display: flex;
 }
 .pages a{
     text-decoration: none;
+    width: 30px;
+    border: grey solid 1px;
+    text-align: center;
+    border-radius: 5px;
+    margin: 0px 3px;
     
 } 
 footer{
